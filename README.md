@@ -5,13 +5,10 @@ This library is a work in progress.
 ## Code Example
 
 
-
 ## Installation
 
 
-
 ## Tests
-
 
 
 ## Contributors
