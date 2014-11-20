@@ -58,7 +58,6 @@ class PasswordGenerator
             : (0 === (int) $number)
                 ? self::$passwordDefaultLength
                 : (int) $number;
-
         $password = $char = '';
 
         switch ($strength) {
