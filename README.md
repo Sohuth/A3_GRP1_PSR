@@ -1,4 +1,5 @@
 ## StringGenerator
+[![Build Status](https://travis-ci.org/Sohuth/A3_GRP1_PSR.svg?branch=master)](https://travis-ci.org/Sohuth/A3_GRP1_PSR)
 
 This library is a work in progress.
 
