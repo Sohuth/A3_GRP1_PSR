@@ -14,29 +14,29 @@ namespace Web1\StringGenerator;
  */
 class PasswordGenerator
 {
-    const PASSWORD_EASY = 0;
+    const PASSWORD_EASY   = 0;
     const PASSWORD_MEDIUM = 1;
-    const PASSWORD_HARD = 2;
+    const PASSWORD_HARD   = 2;
 
     /**
      * @var string
      */
-    private static $passwordCharEasy        = 'abcdefghijlmnopqrstuvwxyz';
+    private static $passwordCharEasy = 'abcdefghijlmnopqrstuvwxyz';
 
     /**
      * @var string
      */
-    private static $passwordCharMedium      = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    private static $passwordCharMedium = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 
     /**
      * @var string
      */
-    private static $passwordCharHard        = '&é(-è_çà)=^$ù@^\|[{#~*';
+    private static $passwordCharHard = '&é(-è_çà)=^$ù@^\|[{#~*';
 
     /**
      * @var int
      */
-    private static $passwordDefaultLength   = 10;
+    private static $passwordDefaultLength = 10;
 
     /**
      * @param null $number
@@ -44,8 +44,7 @@ class PasswordGenerator
      * @return string
      * @throws \Exception
      */
-    public static function getRandomString($number = null, $strength = self::PASSWORD_MEDIUM)
-    {
+    public static function getRandomString($number = null, $strength = self::PASSWORD_MEDIUM){
         if (!in_array($strength, [
             self::PASSWORD_EASY,
             self::PASSWORD_MEDIUM,
@@ -73,7 +72,7 @@ class PasswordGenerator
         }
 
         for ($i = 0; $i < $length; $i++) {
-            $password .= mb_substr($char, rand(0, (mb_strlen($char)-1)), 1);
+            $password .= mb_substr($char, rand(0, (mb_strlen($char) - 1)), 1);
         }
 
         return $password;
