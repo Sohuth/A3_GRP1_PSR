@@ -46,18 +46,18 @@ class PasswordGenerator
      */
     public static function getRandomString($number = null, $strength = self::PASSWORD_MEDIUM)
     {
-        if (!in_array($strength, [
+        if (false === in_array($strength, [
             self::PASSWORD_EASY,
             self::PASSWORD_MEDIUM,
             self::PASSWORD_HARD,
         ]))
             throw new \Exception('C PAS UNE VRAI FORCE MORRAYYYY');
 
-        $length = (is_null($number))
+        $length   = (null === ($number))
             ? self::$passwordDefaultLength
-            : (0 === (int)$number)
+            : (0 === (int) $number)
                 ? self::$passwordDefaultLength
-                : (int)$number;
+                : (int) $number;
 
         $password = $char = '';
 
